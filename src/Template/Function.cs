@@ -1,5 +1,4 @@
 using Amazon.Lambda.Core;
-using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics;
 
