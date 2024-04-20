@@ -1,0 +1,15 @@
+name: .NET Container Deployment
+
+on: [push]
+
+jobs:
+  deploy:
+    uses: rwitzlib/github-actions/.github/workflows/container-deployment.yml@master
+    with:
+      ecr_repository: 000000000000.dkr.ecr.us-east-2.amazonaws.com
+      image_name: template
+      dockerfile_directory: ./src
+      project_directory: ./src
+      global_json_file: ./src/global.json
+      terraform_directory: ./tf
+    secrets: inherit
